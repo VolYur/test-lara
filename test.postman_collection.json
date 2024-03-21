@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "16d90dc6-8ddf-4e33-a369-0e0cea14e598",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18913282"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/banks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/banks"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/banks/show/{slug}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/banks/{{slug}}"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/currencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/currencies"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/currencyExchangeRates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/currencyExchangeRates?code=usd&bank_slug=ukrsibbank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"currencyExchangeRates"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "usd"
+						},
+						{
+							"key": "bank_slug",
+							"value": "ukrsibbank"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/bankBranches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/bankBranches?latitude=48.90625900&longitude=24.71533900&bank_slug=otp-banks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"bankBranches"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "48.90625900"
+						},
+						{
+							"key": "longitude",
+							"value": "24.71533900"
+						},
+						{
+							"key": "bank_slug",
+							"value": "otp-banks"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "slug",
+			"value": "otp-bank"
+		}
+	]
+}
