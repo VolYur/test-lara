@@ -8,7 +8,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class UpdateCurrencies implements ShouldQueue
+class UpdateCurrenciesJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -17,7 +17,7 @@ class UpdateCurrencies implements ShouldQueue
      */
     public function __construct()
     {
-        //
+
     }
 
     /**
@@ -25,6 +25,6 @@ class UpdateCurrencies implements ShouldQueue
      */
     public function handle(): void
     {
-
+        logger()->error('blabla');
     }
 }

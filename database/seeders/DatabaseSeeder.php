@@ -7,14 +7,17 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Http;
 
-class BanksSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-
+        $this->call([
+            //BanksSeeder::class,
+            CurrencySeeder::class,
+        ]);
 
     }
 }
